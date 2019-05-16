@@ -1,0 +1,41 @@
+resource "aws_instance" "labuserxy" {
+  tags = {
+    Name = "labuserxy-${count.index + 1}"
+  }
+
+  availability_zone      = "us-east-2a"
+  count                  = "${var.instance_count}"
+  ami                    = "${var.ami}"
+  instance_type          = "t2.micro"
+  key_name               = "${var.key_name}"
+  vpc_security_group_ids = ["${var.sg-id}"]
+
+  lifecycle {
+    create_before_destroy = true
+  }
+
+  connection {
+    user        = "ubuntu"
+    type        = "ssh"
+    private_key = "${file(var.pvt_key)}"
+  }
+
+  provisioner "file" {
+    source      = "./frontend"
+    destination = "~/"
+  }
+
+   provisioner "remote-exec" {
+    inline = [
+      "chmod +x ~/frontend/run_frontend.sh",
+      "cd ~/frontend",
+      "sudo ~/frontend/run_frontend.sh",
+    ]
+  }
+
+
+}
+
+output "labuserxy" {                                    
+  value = "${aws_instance.labuserxy.*.public_ip}"
+}
