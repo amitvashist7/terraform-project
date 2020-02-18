@@ -1,22 +1,22 @@
 provider "aws" {
-  access_key = "ACCESS_KEY"
-  secret_key = "SECRET_KEY"
-  region     = "us-east-1"
+  access_key = "XXX1"
+  secret_key = "XXX2"
+  region     = "us-east-2"
 }
 
 provider "aws" {
   alias      = "us-west-1"
-  access_key = "ACCESS_KEY"
-  secret_key = "SECRET_KEY"
-  region     = "us-west-1"
+  access_key = "XXX1"
+  secret_key = "XXX2"
+  region     = "us-east-2"
 }
 
 variable "us-east-zones" {
-  default = ["us-east-1a", "us-east-1b"]
+  default = ["us-east-2a", "us-east-2b"]
 }
 
 variable "us-west-zones" {
-  default = ["us-west-1c", "us-west-1b"]
+  default = ["us-east-2a", "us-east-2c"]
 }
 
 variable "multi-region-deployment" {
@@ -34,7 +34,7 @@ resource "aws_instance" "frontend" {
 
   depends_on        = ["aws_instance.backend"]
   availability_zone = "${var.us-east-zones[count.index]}"
-  ami               = "ami-66506c1c"
+  ami               = "ami-0fc20dd1da406780b"
   instance_type     = "t2.micro"
 }
 
@@ -46,7 +46,7 @@ resource "aws_instance" "west_frontend" {
   count             = "${var.multi-region-deployment ? 1 : 0}"
   depends_on        = ["aws_instance.west_backend"]
   provider          = "aws.us-west-1"
-  ami               = "ami-07585467"
+  ami               = "ami-0fc20dd1da406780b"
   availability_zone = "${var.us-west-zones[count.index]}"
   instance_type     = "t2.micro"
 }
@@ -58,7 +58,7 @@ resource "aws_instance" "backend" {
 
   count             = 2
   availability_zone = "${var.us-east-zones[count.index]}"
-  ami               = "ami-66506c1c"
+  ami               = "ami-0fc20dd1da406780b"
   instance_type     = "t2.micro"
 }
 
@@ -68,7 +68,7 @@ resource "aws_instance" "west_backend" {
   }
 
   provider          = "aws.us-west-1"
-  ami               = "ami-07585467"
+  ami               = "ami-0fc20dd1da406780b"
   count             = "${var.multi-region-deployment ? 2 : 0}"
   availability_zone = "${var.us-west-zones[count.index]}"
   instance_type     = "t2.micro"
