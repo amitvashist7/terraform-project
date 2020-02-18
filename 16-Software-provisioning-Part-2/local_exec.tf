@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_instance" "backend" {
   availability_zone      = "${var.us-east-zones[count.index]}"
-  ami                    = "ami-0080e4c5bc078760e"
+  ami                    = "ami-0998bf58313ab53da"
   instance_type          = "t2.micro"
   key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${var.sg-id}"]

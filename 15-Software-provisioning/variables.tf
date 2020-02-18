@@ -1,15 +1,15 @@
 variable "key_name" {
-  default = "amit-personal-aws"
+  default = "terrafrom_key_pair"
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/amit-personal-aws.pem"
+  default = "/root/.ssh/terrafrom_key_pair.pem"
 }
 
 variable "us-east-zones" {
-  default = ["us-east-1a", "us-east-1b"]
+  default = ["us-east-2a", "us-east-2b"]
 }
 
 variable "sg-id" {
-  default = "sg-0a33f7a779cb5419a"
+  default = "sg-025a9dc0ed03bc43a"
 }

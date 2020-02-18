@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 locals {
@@ -11,6 +11,6 @@ resource "aws_instance" "example" {
     Name = "${local.default_name}"
   }
 
-  ami           = "ami-2757f631"
+  ami           = "ami-08cec7c429219e339"
   instance_type = "t2.micro"
 }
