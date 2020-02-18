@@ -44,6 +44,7 @@ data "aws_ami" "amazon_linux" {
 ######
 module "example_asg" {
   source = "terraform-aws-modules/autoscaling/aws"
+  version = "2.9.1"
 
   name = "example-with-elb"
 
@@ -102,7 +103,7 @@ module "example_asg" {
 ######
 module "elb" {
   source = "terraform-aws-modules/elb/aws"
-
+  version = "1.0.1" 
   name = "elb-example"
 
   subnets         = ["${data.aws_subnet_ids.all.ids}"]

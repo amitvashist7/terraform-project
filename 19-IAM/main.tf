@@ -13,6 +13,8 @@ resource "aws_iam_group_membership" "team" {
 
   users = [
     "${aws_iam_user.user.name}",
+    "${aws_iam_user.example.*.name}",
+    "${aws_iam_user.example_seq.*.name}",
   ]
 
   group = "${aws_iam_group.group.name}"
@@ -42,8 +44,13 @@ resource "aws_iam_group_policy" "policy" {
 EOF
 }
 
-#resource "aws_iam_group_policy_attachment" "test-attach" {
-#  group      = "${aws_iam_group.group.name}"
-#  policy_arn = "${aws_iam_group_policy.policy.arn}"
-#}
+#main.tf
+resource "aws_iam_user" "example" {
+  count = "${length(var.username)}"
+  name = "${element(var.username,count.index )}"
+}
 
+resource "aws_iam_user" "example_seq" {
+ count = 3
+ name = "terraform-test-${count.index}"
+}
