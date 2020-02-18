@@ -23,12 +23,13 @@ data "aws_security_group" "default" {
 #####
 module "db" {
   source = "terraform-aws-modules/rds/aws"
-
+  version = "1.36.0"
   identifier = "demodb"
 
   # All available versions: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt
   engine            = "mysql"
   engine_version    = "5.7.19"
+  major_engine_version  = "5.7"
   instance_class    = "db.t2.micro"
   allocated_storage = 5
   storage_encrypted = false

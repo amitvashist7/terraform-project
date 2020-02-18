@@ -28,7 +28,7 @@ data "aws_security_group" "default" {
 ######
 module "elb" {
   source = "terraform-aws-modules/elb/aws"
-
+  version = "1.0.1"
   name = "elb-example"
 
   subnets         = ["${data.aws_subnet_ids.all.ids}"]
@@ -81,7 +81,7 @@ module "elb" {
 ################
 module "ec2_instances" {
   source = "terraform-aws-modules/ec2-instance/aws"
-
+  version = "1.24.0"
   instance_count = "${var.number_of_instances}"
 
   name                        = "my-app"

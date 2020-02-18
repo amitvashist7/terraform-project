@@ -1,4 +1,5 @@
 provider kubernetes {
+version = "~> 1.8"
   # leave blank to pickup config from kubectl config of local system
 }
 
@@ -9,9 +10,11 @@ resource "kubernetes_deployment" "nginx" {
 
   spec {
     selector {
+     match_labels = {
       app = "nginx"
     }
-
+   }
+   
     template {
       metadata {
         labels {
