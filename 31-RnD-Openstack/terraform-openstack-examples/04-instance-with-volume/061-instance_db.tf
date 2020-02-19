@@ -41,14 +41,14 @@ resource "openstack_compute_floatingip_associate_v2" "db" {
 #### VOLUME MANAGEMENT ####
 
 # Create volume
-resource "openstack_blockstorage_volume_v2" "db" {
-  name = "volume-db"
-  size = var.volume_db
-}
+#resource "openstack_blockstorage_volume_v2" "db" {
+#  name = "volume-db"
+#  size = var.volume_db
+#}
 
 # Attach volume to instance instance db
-resource "openstack_compute_volume_attach_v2" "db" {
-  instance_id = openstack_compute_instance_v2.db.id
-  volume_id   = openstack_blockstorage_volume_v2.db.id
-}
+#resource "openstack_compute_volume_attach_v2" "db" {
+#  instance_id = openstack_compute_instance_v2.db.id
+#  volume_id   = openstack_blockstorage_volume_v2.db.id
+#}
 

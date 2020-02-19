@@ -3,19 +3,19 @@
 #### GLANCE
 variable "image" {
   type    = string
-  default = "CentOS7"
+  default = "cirros"
 }
 
 #### NEUTRON
 variable "external_network" {
   type    = string
-  default = "external-network"
+  default = "external"
 }
 
 # UUID of external gateway
 variable "external_gateway" {
   type    = string
-  default = "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f"
+  default = "cc914a49-e90d-436e-b438-78fc9b1727a9"
 }
 
 variable "dns_ip" {
@@ -23,10 +23,10 @@ variable "dns_ip" {
   default = ["8.8.8.8", "8.8.8.4"]
 }
 
-#### VM HTTP parameters ####
+#### VM parameters
 variable "flavor_http" {
   type    = string
-  default = "t2.medium"
+  default = "m1.medium"
 }
 
 variable "network_http" {
@@ -35,23 +35,5 @@ variable "network_http" {
     subnet_name = "subnet-http"
     cidr        = "192.168.1.0/24"
   }
-}
-
-#### MAIN DISK SIZE FOR HTTP
-variable "volume_http" {
-  type    = number
-  default = 10
-}
-
-#### VM DB parameters ####
-variable "flavor_db" {
-  type    = string
-  default = "t2.medium"
-}
-
-#### ATTACHED VOLUME PARAMS
-variable "volume_db" {
-  type    = number
-  default = 15
 }
 

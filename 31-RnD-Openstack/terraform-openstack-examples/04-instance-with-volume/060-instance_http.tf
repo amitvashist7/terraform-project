@@ -19,13 +19,13 @@ resource "openstack_compute_instance_v2" "http" {
   }
 
   # Install system in volume
-  block_device {
-    volume_size           = var.volume_http
-    destination_type      = "volume"
-    delete_on_termination = true
-    source_type           = "image"
-    uuid                  = data.openstack_images_image_v2.centos_current.id
-  }
+#  block_device {
+#    volume_size           = var.volume_http
+#    destination_type      = "volume"
+#    delete_on_termination = true
+#    source_type           = "image"
+#    uuid                  = data.openstack_images_image_v2.centos_current.id
+#  }
 }
 
 # Create network port
