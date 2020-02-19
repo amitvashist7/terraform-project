@@ -1,0 +1,29 @@
+{
+  "variables": {
+    
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "ap-south-1",
+      "source_ami": "ami-0912f71e06545ad88",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "apache-ami-packer-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sudo yum install -y httpd",
+        "sudo chkconfig httpd on",
+        "sudo service httpd start",
+        "sudo chown -R ec2-user:ec2-user /var/www/",
+        "echo '<h1>Welcome to Packer</h1>' > /var/www/html/index.html"
+      ]
+    }
+  ]
+}

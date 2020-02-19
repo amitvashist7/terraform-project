@@ -1,0 +1,8 @@
+*.retry
+.env
+.terraform
+*.tfstate*
+*.state
+*state*
+*tfstate
+*tfstate*

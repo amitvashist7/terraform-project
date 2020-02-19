@@ -1,0 +1,11 @@
+---
+- name: Install Mysql package
+  apt: name=['mariadb-server'] state=present
+
+- name: Create Mysql configuration file
+  template: src=templates/my.cnf.j2 dest=/etc/my.cnf
+  notify:
+  - restart mysql
+
+- name: Start Mysql Service
+  service: name=mysql state=started enabled=yes
