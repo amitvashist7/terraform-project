@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Installing required packages
+      apt: name=apache2 state=present
+
+    - name: Start Apache Service
+      service: name=apache2 state=started
+   
+    - name: Download Mario Image from Web.
+      get_url: url=http://www.mariomayhem.com/downloads/wallpapers/7/nsmb_wp7_1280.jpg dest=/var/www/html/mario.jpg mode=0755
+
+    - name: Deploy Index Sites Files
+      template: src=templates/index.j2 dest=/var/www/html/index.html
+      notify: 
+      - Restart Apache
+  
+    - name: Deploy Info Sites Files
+      template: src=templates/info.j2 dest=/var/www/html/info.html
+    
+  handlers:
+    - name: Restart Apache
+      service: name=apache2 state=restarted

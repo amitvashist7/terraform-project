@@ -1,0 +1,31 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "k8s-terraform-demo-272708",
+            "account_file": "/home/terrafrom07/.ssh/account.json",
+            "zone": "us-west1-b",
+            "source_image": "ubuntu-1604-xenial-v20170202",
+            "image_name": "hyperspace-fe",
+            "ssh_username": "ubuntu",
+            "ssh_pty": "true"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sudo DEBIAN_FRONTEND=noninteractive apt-get update -y -qq",
+                "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git vim build-essential"
+            ]
+        },
+        {
+            "type": "shell",
+            "script": "scripts/base.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/hyperspace-fe.sh"
+        }
+    ]
+}

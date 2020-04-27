@@ -1,0 +1,1000 @@
+ 1147  ls
+ 1148  vim hyperspace.json 
+ 1149  ls -ltr 
+ 1150  ls -a 
+ 1151  rm -rf .hyperspace.json.swp 
+ 1152  vim hyperspace.json 
+ 1153  cd
+ 1154  ls
+ 1155  wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip
+ 1156  ls
+ 1157  unzip packer_1.5.5_linux_amd64.zip 
+ 1158  ls
+ 1159  cp -rf packer bin/
+ 1160  cd - 
+ 1161  ls
+ 1162  packer version 
+ 1163  packer build hyperspace.json 
+ 1164  ls
+ 1165  cd ..
+ 1166  ls
+ 1167  cd terraform/
+ 1168  ls
+ 1169  vim main.tf 
+ 1170  ls
+ 1171  cd ..
+ 1172  ls
+ 1173  cd packer
+ 1174  ls
+ 1175  diff hyperspace-be.json hyperspace.json 
+ 1176  ls
+ 1177  vim hyperspace.json
+ 1178  packer build hyperspace.json 
+ 1179  ls
+ 1180  cd ..
+ 1181  .
+ 1182  ls
+ 1183  cd terraform/
+ 1184  ls
+ 1185  vim main.tf 
+ 1186  ls
+ 1187  cd old/repos/
+ 1188  ls
+ 1189  cd hyperspace/
+ 1190  ls
+ 1191  cd terraform/
+ 1192  ls
+ 1193  vim main.tf 
+ 1194  ls
+ 1195  terraform-12 init 
+ 1196  terraform-12 apply 
+ 1197  terraform-12 apply ls
+ 1198  ls
+ 1199  rm .terraform/
+ 1200  rm -rf .terraform
+ 1201  terraform init 
+ 1202  terraform apply ls
+ 1203  terraform apply
+ 1204  rm -rf .terraform/
+ 1205  vim main.tf 
+ 1206  terraform init 
+ 1207  terraform apply 
+ 1208  terraform destroy 
+ 1209  ls
+ 1210  rm -rf terraform.tfstate* 
+ 1211  ls
+ 1212  rm .terraform/
+ 1213  rm -rf .terraform/
+ 1214  ls
+ 1215  mkdir ../../../terraform-12/29-Packer/hyperspace
+ 1216  ls
+ 1217  cp -rf main.tf ../../../terraform-12/29-Packer/hyperspace/
+ 1218  ls
+ 1219  cd ../packer  ../../../terraform-12/29-Packer/hyperspace/
+ 1220  ls
+ 1221  cd ../
+ 1222  ls
+ 1223  cp -rf packer ../../terraform-12/29-Packer/hyperspace/
+ 1224  ls
+ 1225  git pull 
+ 1226  ls
+ 1227  cd ..
+ 1228  ls
+ 1229  cd hyperspace/
+ 1230  ls
+ 1231  git config --list 
+ 1232  ls
+ 1233  cd ..
+ 1234  ls
+ 1235  mv hyperspace hyperspace-old
+ 1236  git clone https://github.com/erjohnso/hyperspace.git
+ 1237  ls
+ 1238  cd hyperspace
+ 1239  ls
+ 1240  cd packer/
+ 1241  ls
+ 1242  cat hyperspace-be.json 
+ 1243  ls
+ 1244  cd scripts/
+ 1245  ls
+ 1246  cat base.sh 
+ 1247  ls
+ 1248  cat hyperspace-be.sh 
+ 1249  cat hyperspace-fe.sh 
+ 1250  ls
+ 1251  cat base.sh 
+ 1252  ls
+ 1253  cd ..
+ 1254  ls
+ 1255  cd ..
+ 1256  ls
+ 1257  cd ..
+ 1258  ls
+ 1259  git clone https://github.com/amitvashisttech/hyperspace.git
+ 1260  ls
+ 1261  cd ..
+ 1262  ls
+ 1263  git clone https://github.com/amitvashisttech/hyperspace.git
+ 1264  ls
+ 1265  cp -rf repos/hyperspace/* hyperspace/
+ 1266  ls
+ 1267  cd hyperspace/
+ 1268  ls -a 
+ 1269  cd ..
+ 1270  ls
+ 1271  rm -rf hyperspace/
+ 1272  git clone https://github.com/amitvashisttech/hyperspace.git
+ 1273  ls
+ 1274  cd repos/
+ 1275  ls
+ 1276  cd hyperspace
+ 1277  ls
+ 1278  rm -rf .git
+ 1279  ls
+ 1280  cd ..
+ 1281  ls
+ 1282  cd ..
+ 1283  ls
+ 1284  cp -rf repos/hyperspace/* hyperspace/
+ 1285  ls
+ 1286  cd hyperspace/
+ 1287  ls
+ 1288  cd packer/
+ 1289  ls
+ 1290  cd scripts/
+ 1291  ls
+ 1292  vim base.sh 
+ 1293  ls
+ 1294  cd ..
+ 1295  ls
+ 1296  cp -rf ../../terraform-12/29-Packer/hyperspace/packer/hyperspace.json .
+ 1297  ls
+ 1298  cat hyperspace.json 
+ 1299  ls
+ 1300  vim hyperspace-fe.json 
+ 1301  ls
+ 1302  vim hyperspace-be.json 
+ 1303  ls
+ 1304  packer build
+ 1305  packer build hyperspace-fe.json 
+ 1306  ls
+ 1307  cd ..
+ 1308  ls
+ 1309  cd etc/
+ 1310  ls
+ 1311  cd ..
+ 1312  ls
+ 1313  cd packer/
+ 1314  ls
+ 1315  vim scripts/base.sh 
+ 1316  ls
+ 1317  cd ..
+ 1318  ls
+ 1319  packer build hyperspace-fe.json 
+ 1320  ld
+ 1321  cd packer/
+ 1322  ls
+ 1323  packer build hyperspace-fe.json 
+ 1324  ls
+ 1325  cd ../../
+ 1326  ls
+ 1327  cd terraform-12/
+ 1328  ls
+ 1329  cd 29-Packer/
+ 1330  ls
+ 1331  cd hyperspace/
+ 1332  ls
+ 1333  cd ..
+ 1334  ls
+ 1335  cd packer/
+ 1336  ls
+ 1337  cd ..
+ 1338  ls
+ 1339  mkdir apache
+ 1340  mv remote_exec.tf variables.tf apache/
+ 1341  ls
+ 1342  mv packer apache/
+ 1343  ls
+ 1344  cat hyperspace/main.tf 
+ 1345  ls
+ 1346  cd hyperspace/
+ 1347  ls
+ 1348  vim main.tf 
+ 1349  ls
+ 1350  cat ../../25-AutoScaler/main.tf
+ 1351  ls
+ 1352  cd 
+ 1353  ls
+ 1354  old/
+ 1355  ls
+ 1356  cd old/
+ 1357  ls
+ 1358  cd hyperspace/
+ 1359  ls
+ 1360  cd terraform/
+ 1361  ls
+ 1362  vim main.tf 
+ 1363  terraform init 
+ 1364  terraform apply 
+ 1365  ls
+ 1366  terraform destroy 
+ 1367  ls
+ 1368  cd ..
+ 1369  ls
+ 1370  cd ..
+ 1371  ls
+ 1372  cd terraform-12/
+ 1373  ls
+ 1374  du -sh * 
+ 1375  du -sh * |grep M 
+ 1376  rm -rf  13-GCP-Bucket/.terraform/
+ 1377  rm -rf  15-Workspaces/.terraform
+ 1378  rm -rf  17-SF/.terraform/
+ 1379  rm -rf  21-IAM/.terraform
+ 1380  rm -rf  22-VPC/.terraform/
+ 1381  rm -rf  25-AutoScaler/.terraform
+ 1382  ls
+ 1383  du -sh * |grep M 
+ 1384  cd 22-VPC/
+ 1385  ls
+ 1386  cd old-vpc/
+ 1387  ls
+ 1388  ls -a 
+ 1389  cd new-vpc/
+ 1390  ls
+ 1391  rm -rf terraform.tfstate* 
+ 1392  ls
+ 1393  rm -rf .terraform/
+ 1394  ls
+ 1395  cd ..
+ 1396  ls
+ 1397  ls -a 
+ 1398  cd ..
+ 1399  ls
+ 1400  cd VPC/
+ 1401  ls
+ 1402  rm -rf terraform.tfstate* 
+ 1403  rm -rf .terraform/
+ 1404  ls
+ 1405  cd ..
+ 1406  ls
+ 1407  cd ..
+ 1408  ls
+ 1409  cd ..
+ 1410  ls
+ 1411  du -sh terraform-12
+ 1412  ls
+ 1413  cd .
+ 1414  ls
+ 1415  cd repos/
+ 1416  ls
+ 1417  cd terraform-voda-20200217/
+ 1418  lws
+ 1419  ls
+ 1420  cp -rf ../../terraform-12 .
+ 1421  git add . 
+ 1422  git status 
+ 1423  git commit -m "Hyperspace"; git push 
+ 1424  ls
+ 1425  cd old/
+ 1426  ls
+ 1427  cd terraform-12/
+ 1428  ls
+ 1429  cd 22-VPC/
+ 1430  ls
+ 1431  mkdir ../../../terraform-hpe-31March2020/25-VPC-3-Subnet
+ 1432  ls
+ 1433  cd old-vpc/
+ 1434  ls
+ 1435  cp -rf  providers.tf ../../../terraform-hpe-31March2020/25-VPC-3-Subnet/
+ 1436  cp -rf  providers.tf ../../../../../terraform-hpe-31March2020/25-VPC-3-Subnet/
+ 1437  ls
+ 1438  cd 
+ 1439  ls
+ 1440  cd terraform-hpe-31March2020/25-VPC-3-Subnet/
+ 1441  ls
+ 1442  vim vpc/vpc.tf 
+ 1443  cd - 
+ 1444  ls
+ 1445  cd old/terraform-12/22-VPC/old-vpc/
+ 1446  ls
+ 1447  terraform destroy 
+ 1448  ls
+ 1449  cd ..
+ 1450  ls
+ 1451  cd ..
+ 1452  ls
+ 1453  cd terraform-hpe-31March2020/
+ 1454  ls
+ 1455  cp -rf ../old/terraform-12/17-SF . 
+ 1456  ls
+ 1457  cd 17-SF/
+ 1458  ls
+ 1459  c d..
+ 1460  cd ..
+ 1461  ls
+ 1462  cp -rf ../old/terraform-12/16-SF . 
+ 1463  ls
+ 1464  rm -rf 17-SF/
+ 1465  ls
+ 1466  mv 16-SF 17-Software-Provisioner
+ 1467  ls
+ 1468  cd 17-Software-Provisioner/
+ 1469  ls
+ 1470  mv workspace.tf provsioner.tf
+ 1471  ls
+ 1472  vim provsioner.tf 
+ 1473  ls
+ 1474  cd frontend/
+ 1475  ls
+ 1476  vim run_frontend.sh 
+ 1477  ls
+ 1478  rm 1
+ 1479  ls
+ 1480  cd ..
+ 1481  s
+ 1482  ls
+ 1483  vim variables.tf 
+ 1484  ls
+ 1485  terraform init 
+ 1486  terraform apply 
+ 1487  terraform destroy
+ 1488  ls
+ 1489  rm -rf terraform.tfstate* .terraform 
+ 1490  ls
+ 1491  cd ..
+ 1492  ls
+ 1493  git add . ; git commit -m "17-Software-Provisioner" ; git push 
+ 1494  ls
+ 1495  cp -rf ../old/terraform-12/17-SF 18-Software-Provisioner-Ansible
+ 1496  ls
+ 1497  cd 18-Software-Provisioner-Ansible/
+ 1498  ls
+ 1499  rm -rf terraform.tfstate* 
+ 1500  ls
+ 1501  mv workspace.tf provsioner.tf
+ 1502  ls
+ 1503  cat variables.tf 
+ 1504  ls
+ 1505  vim provsioner.tf 
+ 1506  ls
+ 1507  cd frontend/
+ 1508  ls
+ 1509  cat run_frontend.sh 
+ 1510  ls
+ 1511  cd ..
+ 1512  ls
+ 1513  cat ansible
+ 1514  cat ansible.cfg 
+ 1515  ls
+ 1516  cd ..
+ 1517  cd - 
+ 1518  ls
+ 1519  cd frontend/
+ 1520  ls
+ 1521  cat app.py 
+ 1522  cat index.html 
+ 1523  ls
+ 1524  cd ..
+ 1525  ls
+ 1526  cd ansible/
+ 1527  ls
+ 1528  cat ansible.cfg 
+ 1529  ls
+ 1530  vim setup-backend.yaml
+ 1531  ls
+ 1532  cd templates/
+ 1533  ls
+ 1534  cat index.j2 
+ 1535  ls
+ 1536  cat info.j2 
+ 1537  ls
+ 1538  cd ..
+ 1539  ls
+ 1540  cat group_vars/all.yml 
+ 1541  ls
+ 1542  cd ..
+ 1543  ls
+ 1544  cat provsioner.tf 
+ 1545  ls
+ 1546  terraform init 
+ 1547  terraform apply 
+ 1548  ls
+ 1549  cd ansible/
+ 1550  ls
+ 1551  vim templates/info.j2 
+ 1552  ls
+ 1553  cd ..
+ 1554  ls
+ 1555  cd ansible/
+ 1556  ls
+ 1557  vim templates/index.j2 
+ 1558  cd ..
+ 1559  ls
+ 1560  terraform apply 
+ 1561  ls
+ 1562  cat provsioner.tf 
+ 1563  ansible-playbook -e /home/terrafrom07/.ssh/id_rsa -i 35.247.25.68 ./ansible/setup-backend.yaml -v
+ 1564  vim inventory 
+ 1565  ansible-playbook -e /home/terrafrom07/.ssh/id_rsa -i inventory ./ansible/setup-backend.yaml -v
+ 1566  ansible-playbook -e sshKey="/home/terrafrom07/.ssh/id_rsa" -i inventory ./ansible/setup-backend.yaml -v
+ 1567  cat ansible/setup-backend.yaml 
+ 1568  vi ansible/setup-backend.yaml 
+ 1569  ansible-playbook -e sshKey="/home/terrafrom07/.ssh/id_rsa" -i inventory ./ansible/setup-backend.yaml -v
+ 1570  vim ansible/templates/index.j2 
+ 1571  ansible-playbook -e sshKey="/home/terrafrom07/.ssh/id_rsa" -i inventory ./ansible/setup-backend.yaml -v
+ 1572  ls
+ 1573  rm -rf inventory 
+ 1574  ls
+ 1575  terraform destroy 
+ 1576  ls
+ 1577  rm -rf terraform.tfstate* 
+ 1578  ls
+ 1579  rm -rf .terraform
+ 1580  ls
+ 1581  cd ..
+ 1582  ls
+ 1583  git add . ; git commit -m "18-Software-Provisioner-Ansible" ; git push 
+ 1584  ls
+ 1585  vim 18-Software-Provisioner-Ansible/
+ 1586  ls
+ 1587  cd 18-Software-Provisioner-Ansible/
+ 1588  ls
+ 1589  vim provsioner.tf 
+ 1590  ls
+ 1591  terraform init 
+ 1592  vim provsioner.tf 
+ 1593  terraform init 
+ 1594  terraform apply 
+ 1595  vim frontend/run_frontend.sh 
+ 1596  ls
+ 1597  terraform apply 
+ 1598  terraform destroy 
+ 1599  ls
+ 1600  rm -rf terraform.tfstate* 
+ 1601  ls
+ 1602  cd ..
+ 1603  ls
+ 1604  cp -rf 15-Workspaces 19-GCP-Project
+ 1605  ls
+ 1606  cd 19-GCP-Project/
+ 1607  ls
+ 1608  vim workspace.tf 
+ 1609  ls
+ 1610  terraform init 
+ 1611  vim workspace.tf 
+ 1612  terraform init 
+ 1613  terraform apply 
+ 1614  terraform init 
+ 1615  terraform apply 
+ 1616  vi workspace.tf 
+ 1617  terraform apply 
+ 1618  ls
+ 1619  rm -rf terraform.tfstate* 
+ 1620  ls
+ 1621  cd ..
+ 1622  ls
+ 1623  cp -rf 19-GCP-Project 20-GCP-Service-Account
+ 1624  ls
+ 1625  vim 20-GCP-Service-Account/workspace.tf 
+ 1626  ls
+ 1627  cd 20-GCP-Service-Account/
+ 1628  ls
+ 1629  mv workspace.tf service-account.tf
+ 1630  ls
+ 1631  rm -rf .terraform/
+ 1632  terraform init 
+ 1633  terraform apply 
+ 1634  terraform show
+ 1635  ls
+ 1636  cd ..
+ 1637  ls
+ 1638  du -sh * 
+ 1639  rm -rf 19-GCP-Project/.terraform
+ 1640  rm -rf 20-GCP-Service-Account/.terraform/
+ 1641  ls
+ 1642  git add . ; git commit -m "20-GCP-Service-Account"; git push 
+ 1643  ls
+ 1644  cd 25-VPC-3-Subnet/
+ 1645  ls
+ 1646  cd vpc/
+ 1647  ls
+ 1648  terraform destroy 
+ 1649  ls
+ 1650  rm -rf terraform.tfstate* 
+ 1651  ls
+ 1652  cd ..
+ 1653  ls
+ 1654  cd app/
+ 1655  ls
+ 1656  rm -rf terraform.tfstate* 
+ 1657  ls
+ 1658  rm -rf .terraform
+ 1659  ls
+ 1660  cd ..
+ 1661  ls
+ 1662  cd vpc/
+ 1663  ls
+ 1664  ls -a 
+ 1665  rm .terraform
+ 1666  rm -rf .terraform
+ 1667  ls
+ 1668  cd ..
+ 1669  ls
+ 1670  cd ..
+ 1671  ls
+ 1672  du -sh * 
+ 1673  cd 18-Software-Provisioner-Ansible/
+ 1674  ls
+ 1675  du -sh * 
+ 1676  ls -a
+ 1677  rm -rf .terraform/
+ 1678  ls
+ 1679  cd ..
+ 1680  ls
+ 1681  du -sh * 
+ 1682  git add . ; git commit -m "25-VPC-3-Subnet" ; git push 
+ 1683  ls
+ 1684  cd 26-DNS/
+ 1685  ls
+ 1686  cat main.tf
+ 1687  vim main.tf
+ 1688  terraform-12 init 
+ 1689  terraform-12 apply 
+ 1690  dig -x 35.192.74.250
+ 1691  dig frontend.prod.mydomain-av.com.
+ 1692  dig frontend.prod.mydomain-av.com. @ns-cloud-d1.googledomains.com.
+ 1693  ls
+ 1694  terraform destroy 
+ 1695  ls
+ 1696  terraform-12 destroy 
+ 1697  ls
+ 1698  rm -rf terraform.tfstate* 
+ 1699  ls
+ 1700  cd ..
+ 1701  ls
+ 1702  cd 27-AutoScaler/
+ 1703  ls
+ 1704  cat variables.tf 
+ 1705  ls
+ 1706  vim main.tf
+ 1707  terraform-12 init 
+ 1708  terraform-12 apply 
+ 1709  terraform-12 destroy 
+ 1710  ls
+ 1711  rm -rf .terraform/ terraform.tfstate* 
+ 1712  ls
+ 1713  cd ..
+ 1714  ls
+ 1715  cd 28-Real-Life-Example/
+ 1716  ls
+ 1717  vim main.tf 
+ 1718  ls
+ 1719  vim variables.tf 
+ 1720  ls
+ 1721  cd scripts/
+ 1722  ls
+ 1723  vim install.sh 
+ 1724  ls
+ 1725  cd ..
+ 1726  ls
+ 1727  terraform-12 init 
+ 1728  terraform-12 apply 
+ 1729  ls
+ 1730  cd scripts/
+ 1731  ls
+ 1732  cd ..
+ 1733  ls
+ 1734  cat main.tf 
+ 1735  ls
+ 1736  cd 
+ 1737  cd - 
+ 1738  curl http://35.247.59.42/
+ 1739  ls
+ 1740  while true;do curl http://35.247.59.42; done
+ 1741  ls
+ 1742  terraform-12 destroy 
+ 1743  ls
+ 1744  rm -rf terraform.tf* 
+ 1745  ls
+ 1746  rm -rf .terraform
+ 1747  ls
+ 1748  cd ..
+ 1749  ls
+ 1750  du -sh * 
+ 1751  cd 26-DNS/
+ 1752  ls
+ 1753  rm -rf .terraform
+ 1754  ls
+ 1755  cd ..
+ 1756  ls
+ 1757  git add . ; git commit -m "28-Real-Life-Example"; git push 
+ 1758  ls
+ 1759  cd old/
+ 1760  ls
+ 1761  cd terraform-12/
+ 1762  ls
+ 1763  cp -rf 29-Packer 29-Packer-Windows
+ 1764  ls
+ 1765  cd 29-Packer-Windows/
+ 1766  ;s
+ 1767  ls
+ 1768  cp -rf windows
+ 1769  cp -rf apache windows
+ 1770  ls
+ 1771  cd windows/
+ 1772  ls
+ 1773  cd packer/
+ 1774  ls
+ 1775  cat build.json 
+ 1776  ls
+ 1777  vim windows.json
+ 1778  ls
+ 1779  packer build windows.json 
+ 1780  ls
+ 1781  cd old/
+ 1782  ls
+ 1783  cd terraform-12/
+ 1784  ls
+ 1785  cd 29-Packer-Windows/
+ 1786  ls
+ 1787  cd windows/
+ 1788  ls
+ 1789  cd packer/
+ 1790  ls
+ 1791  vim windows.json 
+ 1792  packer build windows.json 
+ 1793  vim windows.json 
+ 1794  packer build windows.json 
+ 1795  ls
+ 1796  vim windows.json 
+ 1797  packer build windows.json 
+ 1798  vim windows.json 
+ 1799  packer build windows.json 
+ 1800  vim windows.json 
+ 1801  packer build windows.json 
+ 1802  vim windows.json 
+ 1803  packer build windows.json 
+ 1804  vim windows.json 
+ 1805  packer build windows.json 
+ 1806  ls
+ 1807  sudo su - 
+ 1808  ls
+ 1809  cd old/terraform-12/
+ 1810  ls
+ 1811  cd 29-Packer-Windows/
+ 1812  ls
+ 1813  cd windows/
+ 1814  ls
+ 1815  cd packer/
+ 1816  ls
+ 1817  cat windows.json 
+ 1818  ls
+ 1819  vim windows.json 
+ 1820  ls
+ 1821  vim windows.json 
+ 1822  cat windows.json 
+ 1823  ls
+ 1824  cd ..
+ 1825  ls
+ 1826  vim remote_exec.tf 
+ 1827  ls
+ 1828  cd ..
+ 1829  ls
+ 1830  cd apache/
+ 1831  ls
+ 1832  cp -rf remote_exec.tf ../windows/
+ 1833  cp -rf variables.tf ../windows/
+ 1834  ls
+ 1835  cd ../windows/
+ 1836  ls
+ 1837  vim remote_exec.tf 
+ 1838  ls
+ 1839  cd ..
+ 1840  ls
+ 1841  cd apache/
+ 1842  ;s
+ 1843  ls
+ 1844  cat remote_exec.tf 
+ 1845  ls
+ 1846  cd ..
+ 1847  ls
+ 1848  cd ..
+ 1849  ls
+ 1850  cd 29-Packer
+ 1851  ls
+ 1852  cd apache/
+ 1853  ls
+ 1854  cat remote_exec.tf 
+ 1855  ls
+ 1856  cd..
+ 1857  cd ..
+ 1858  ls
+ 1859  cat hyperspace/main.tf 
+ 1860  ls
+ 1861  cd ..
+ 1862  ls
+ 1863  cd 29-Packer-Windows/
+ 1864  ls
+ 1865  cp -rf hyperspace/main.tf windows/
+ 1866  ls
+ 1867  cd windows/
+ 1868  ls
+ 1869  rm -rf remote_exec.tf  variables.tf 
+ 1870  ls
+ 1871  cat packer/windows.json 
+ 1872  vim  packer/windows.json 
+ 1873  ls
+ 1874  vim main.tf 
+ 1875  ls
+ 1876  cd packer/
+ 1877  ls
+ 1878  packer build windows.json 
+ 1879  ls
+ 1880  cd ..
+ 1881  ls
+ 1882  terraform init 
+ 1883  terraform apply 
+ 1884  terraform destroy 
+ 1885  cd 
+ 1886  ls
+ 1887  cd .ssh/
+ 1888  ls
+ 1889  ls -ltr account.json 
+ 1890  pwd
+ 1891  vault login eb86e276-2803-db2c-21e4-8ad4adecf364
+ 1892  ls
+ 1893  cd ls
+ 1894  cd ..
+ 1895  ls
+ 1896  cd old/
+ 1897  ls
+ 1898  cd terraform-12/
+ 1899  ls
+ 1900  cd 23-Instance-IP/
+ 1901  ls
+ 1902  vim providers.tf 
+ 1903  vault login eb86e276-2803-db2c-21e4-8ad4adecf364
+ 1904  ls
+ 1905  set | grep -i vault 
+ 1906  export VAULT_ADDR=http://127.0.0.1:8200
+ 1907  vault login eb86e276-2803-db2c-21e4-8ad4adecf364
+ 1908  ls
+ 1909  vim providers.tf 
+ 1910  terraform init 
+ 1911  terraform apply 
+ 1912  vim ~/.vault-token
+ 1913  cat ~/.vault-token
+ 1914  vim providers.tf 
+ 1915  terraform init 
+ 1916  terraform apply 
+ 1917  vim providers.tf 
+ 1918  terraform apply 
+ 1919  terraform init 
+ 1920  terraform apply 
+ 1921  vim providers.tf 
+ 1922  terraform apply 
+ 1923  ls
+ 1924  vim providers.tf 
+ 1925  ls
+ 1926  vim main.tf 
+ 1927  ls
+ 1928  vim providers.tf 
+ 1929  ls
+ 1930  vim main.tf 
+ 1931  ls
+ 1932  vim variables.tf 
+ 1933  terraform init 
+ 1934  terraform apply 
+ 1935  cd 
+ 1936  ls
+ 1937  cd old/
+ 1938  ls
+ 1939  cd repos/
+ 1940  ls
+ 1941  git clone https://github.com/alexandarp/terraform-vault-gcp-dynamic-secret.git
+ 1942  ls
+ 1943  cd terraform-vault-gcp-dynamic-secret/
+ 1944  ls
+ 1945  cd scripts/
+ 1946  ls
+ 1947  cat vault.sh 
+ 1948  vault write gcp/roleset/terraform-gcp-roleset         bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project=$project         secret_type="access_token"
+ 1949  vault write gcp/roleset/terraform-gcp-roleset         bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project=k8s-terraform-demo-272708         secret_type="access_token"
+ 1950  ls
+ 1951  vim vault.sh 
+ 1952  cat ../../terraform-hpe-31March2020/
+ 1953  cat ../../terraform-12/13-GCP-Bucket/provider.tf 
+ 1954  ls
+ 1955  ./vault.sh 
+ 1956  vault list 
+ 1957  vault status 
+ 1958  vault list 
+ 1959  export VAULT_DEV_ROOT_TOKEN_ID="daaf0b59-0dab-4a41-3f08-1e02abf11d7c"
+ 1960  ./vault.sh 
+ 1961  export VAULT_DEV_ROOT_TOKEN_ID="16df59a7-bb37-0194-6b48-188409ec1ede"
+ 1962  ls
+ 1963  cat vault.sh 
+ 1964  vault secrets enable gcp
+ 1965  vault secrets enable gcp path=gcp
+ 1966  vault secrets enable -path=gcp gcp
+ 1967  vault enable gcp 
+ 1968  vault list 
+ 1969  vault auth
+ 1970  vault secrets enable -path=kv kv
+ 1971  export VAULT_DEV_ROOT_TOKEN_ID="16df59a7-bb37-0194-6b48-188409ec1ede"
+ 1972  vault secrets enable -path=kv kv
+ 1973  vault status 
+ 1974  vault secrets enable -path=kv kv
+ 1975  vault secrets enable  kv
+ 1976  vault secrets enable  kv -path=kv
+ 1977  vault secrets enable  kv
+ 1978  vault  enable  kv
+ 1979  vault secrets list
+ 1980  ls
+ 1981  cat vault.sh 
+ 1982  vault write gcp/config credentials=@/home/terrafrom07/.ssh/account.json ttl=3600 max_ttl=86400
+ 1983  vault status 
+ 1984  vault write auth/gcp/config credentials=@/home/terrafrom07/.ssh/account.json
+ 1985  cat vault.sh 
+ 1986  vault write auth/gcp/terraform-gcp-roleset         bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project="k8s-terraform-demo-272708"         secret_type="access_token"
+ 1987  vault status 
+ 1988  vault write auth/gcp/terraform-gcp-roleset         bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project="k8s-terraform-demo-272708" \
+ 1989  vault write auth/gcp/roleset         bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project="k8s-terraform-demo-272708"         secret_type="access_token"
+ 1990  vault write auth/gcp/config        bindings=@gcp.hcl         token_scopes="https://www.googleapis.com/auth/cloud-platform"         project="k8s-terraform-demo-272708"         secret_type="access_token"
+ 1991  vault secrets enable gcp
+ 1992  vault status 
+ 1993  vault secrets --help
+ 1994  vault secrets list 
+ 1995  vault secrets list
+ 1996  ls
+ 1997  cat vault.sh 
+ 1998  ls
+ 1999  cd terraform-hpe-31March2020/
+ 2000  ls
+ 2001  cp -rf ../old/terraform-12/27-K8S-Deploy-Cluster 29-K8S-Deploy-Cluster
+ 2002  ls
+ 2003  cd 29-K8S-Deploy-Cluster/
+ 2004  ls
+ 2005  vim kube.tf 
+ 2006  ls
+ 2007  cd kubernetes/
+ 2008  ls
+ 2009  cat providers.tf 
+ 2010  vi  providers.tf 
+ 2011  ls
+ 2012  vim ../kube.tf 
+ 2013  ls
+ 2014  cat variables.tf 
+ 2015  ls
+ 2016  vim main.tf 
+ 2017  ls
+ 2018  cd ..
+ 2019  ls
+ 2020  terraform init 
+ 2021  terraform apply 
+ 2022  ls
+ 2023  vim kube.tf 
+ 2024  ls
+ 2025  vim kubernetes/variables.tf 
+ 2026  terraform apply 
+ 2027  sudo apt-get install kubectl -y 
+ 2028  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+ 2029  ls
+ 2030  cd 
+ 2031  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl
+ 2032  ls
+ 2033  chmod +x ./kubectl
+ 2034  mv kubectl bin/
+ 2035  ls
+ 2036  source .bashrc 
+ 2037  ls
+ 2038  mkdir .kube
+ 2039  vim .kube/config
+ 2040  kubectl get nodes 
+ 2041  kubectl get pods 
+ 2042  kubectl get pods --all-namespaces
+ 2043  kubectl get nodes 
+ 2044  kubectl get ns
+ 2045  kubectl get pods 
+ 2046  kubectl get pods  -n kube-system
+ 2047  kubectl get pods 
+ 2048  kubectl run k8s-get-started --image=amitvashist7/k8s-tiny-web --port=80
+ 2049  kubectl get pods 
+ 2050  kubectl describe pods k8s-get-started
+ 2051  kubectl get pods 
+ 2052  kubectl get svc 
+ 2053  kubectl get deployment
+ 2054  kubectl expose pod k8s-get-started --type=LoadBalance
+ 2055  kubectl expose pod k8s-get-started --type=LoadBalancer
+ 2056  ls
+ 2057  kubectl get pods 
+ 2058  kubectl get svc 
+ 2059  ls
+ 2060  cd - 
+ 2061  ls
+ 2062  cd ..
+ 2063  ls
+ 2064  cp -rf ../old/terraform-12/28-K8S-First-App 30-K8S-First -App
+ 2065  cp -rf ../old/terraform-12/28-K8S-First-App 30-K8S-First-App
+ 2066  ls
+ 2067  cd 30-K8S-First-App/
+ 2068  ls
+ 2069  vim deployment.tf 
+ 2070  ls
+ 2071  terraform init 
+ 2072  terraform apply 
+ 2073  kubectl get pods 
+ 2074  kubectl get all
+ 2075  ls
+ 2076  vim deployment.tf 
+ 2077  ls
+ 2078  kubectl get pods 
+ 2079  kubectl get deployment 
+ 2080  kubectl scale --replicas=2 deployment nginx
+ 2081  kubectl get deployment 
+ 2082  kubectl get pods 
+ 2083  ls
+ 2084  terraform destroy 
+ 2085  ls
+ 2086  kubectl get all 
+ 2087  ls
+ 2088  rm -rf .terraform terraform.tfstate* 
+ 2089  ls
+ 2090  cd ..
+ 2091  ls
+ 2092  cd 29-K8S-Deploy-Cluster/
+ 2093  ls
+ 2094  terraform destroy 
+ 2095  ls
+ 2096  rm -rf terraform.tfstate* 
+ 2097  ls
+ 2098  cd ..
+ 2099  ls
+ 2100  cd 30-K8S-First-App/
+ 2101  ls
+ 2102  cd ..
+ 2103  ls
+ 2104  du -sh * 
+ 2105  cd 29-K8S-Deploy-Cluster/
+ 2106  ls
+ 2107  rm -rf .terraform
+ 2108  ls
+ 2109  cd ..
+ 2110  ls
+ 2111  du -sh * 
+ 2112  cd 29-K8S-Deploy-Cluster/
+ 2113  ls
+ 2114  ls -a 
+ 2115  cd ..
+ 2116  cd - 
+ 2117  cd kubernetes/
+ 2118  ls
+ 2119  ls -a 
+ 2120  ls
+ 2121  cd..
+ 2122  ls
+ 2123  cd ..
+ 2124  ls
+ 2125  ls -a 
+ 2126  du -sh * 
+ 2127  ls
+ 2128  rm -rf kubectl 
+ 2129  ls
+ 2130  cd ..
+ 2131  ls
+ 2132  du -sh * 
+ 2133  git add . ; git commit -m "29-K8S-Deploy-Cluster & 30-K8S-First-App"
+ 2134  git push 
+ 2135  ls
+ 2136  cd 29-K8S-Deploy-Cluster/
+ 2137  ls
+ 2138  vim kube.tf 
+ 2139  ls
+ 2140  history 
+ 2141  ls
+ 2142  cd .
+ 2143  ls
+ 2144  cd ..
+ 2145  ls
+ 2146  history > Day4_History.txt

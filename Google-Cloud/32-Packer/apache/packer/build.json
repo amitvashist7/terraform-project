@@ -1,0 +1,22 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "k8s-terraform-demo-272708",
+      "account_file": "/home/terrafrom07/.ssh/account.json",
+      "zone": "us-west1-b",
+      "source_image": "ubuntu-1604-xenial-v20170202",
+      "ssh_username": "ubuntu",
+      "image_name": "apache-image-packer-{{timestamp}}",
+      "ssh_pty": "true"
+    }
+  ],
+  "provisioners": [
+     {
+            "type": "shell",
+            "script": "scripts/base.sh"
+        }
+      ]
+    }
+ 
+

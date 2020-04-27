@@ -1,0 +1,930 @@
+    1  sudo su - 
+    2  exit
+    3  free -m 
+    4  sudo su - 
+    5  ls
+    6  ssh-keygen 
+    7  ls
+    8  vi .ssh/account.json
+    9  ls
+   10  cd terraform-voda-20200217/
+   11  ls
+   12  cd 25-K8S-Deploy-Cluster/
+   13  ls
+   14  cat kube.tf 
+   15  ls
+   16  cd kubernetes/
+   17  ls
+   18  vim variables.tf 
+   19  ls
+   20  vim providers.tf 
+   21  ls
+   22  git clone https://github.com/amitvashisttech/terraform-voda-20200217.git
+   23  ls
+   24  cd terraform-voda-20200217/
+   25  s
+   26  ls
+   27  cd 01-Setup-Terrafrom/
+   28  ls
+   29  cat terrafrom.sh 
+   30  ls
+   31  ./terrafrom.sh 
+   32  apt-get install jq unzip -y 
+   33  sudo apt-get install jq unzip -y 
+   34  sudo apt-get update;  apt-get install jq unzip -y 
+   35  sudo apt-get install jq unzip -y 
+   36  ./terrafrom.sh 
+   37  source ~/.bashrc
+   38  terraform version 
+   39  cd 
+   40  ls
+   41  mkdir terraform-12
+   42  ls
+   43  cd terraform-12/
+   44  ls
+   45  cp -rf ../terraform-voda-20200217/01-Setup-Terrafrom . 
+   46  ls
+   47  cp -rf ../terraform-voda-20200217/02-First_Deployment . 
+   48  ls
+   49  cd 02-First_Deployment/
+   50  ls
+   51  vim first_deployment.tf 
+   52  ls
+   53  cd ..
+   54  ls
+   55  cp -rf ../terraform-voda-20200217/03-Basic-commands-execution . 
+   56  ls
+   57  cp -rf 03-Basic-commands-execution/first_deployment.tf 0
+   58  cat  03-Basic-commands-execution/first_deployment.tf 
+   59  ls
+   60  cp -rf 02-First_Deployment/first_deployment.tf 03-Basic-commands-execution/
+   61  cd 03-Basic-commands-execution/
+   62  ls
+   63  vi first_deployment.tf 
+   64  terraform init
+   65  terraform apply 
+   66  vi first_deployment.tf 
+   67  terraform apply 
+   68  vi first_deployment.tf 
+   69  terraform apply 
+   70  terraform destroy 
+   71  ls
+   72  em -rf terraform.tfstate* 
+   73  ls
+   74  rm -rf terraform.tfstate* 
+   75  ls
+   76  vim first_deployment.tf 
+   77  ls
+   78  cd ..
+   79  ls
+   80  cp -rf ../terraform-voda-20200217/04-Resources . 
+   81  ls
+   82  cd 04-Resources/
+   83  ls
+   84  vim resources.tf 
+   85  ls
+   86  cat ../03-Basic-commands-execution/first_deployment.tf >> resources.tf 
+   87  vim resources.tf 
+   88  ls
+   89  cd ..
+   90  ls
+   91  cd 03-Basic-commands-execution/
+   92  ls
+   93  vim first_deployment.tf 
+   94  terraform apply 
+   95  vi first_deployment.tf 
+   96  ls
+   97  cd ..
+   98  ls
+   99  cd 04-Resources/
+  100  ls
+  101  vim resources.tf 
+  102  cp -rf ../03-Basic-commands-execution/.terraform . 
+  103  terraform init 
+  104  terraform apply 
+  105  vim resources.tf 
+  106  terraform list 
+  107  vim resources.tf 
+  108  terraform apply
+  109  terraform destroy 
+  110  vi resources.tf 
+  111  ls
+  112  rm -rf .terraform/ terraform.tfstate* 
+  113  ls
+  114  cd ..
+  115  ls
+  116  cp -rf ../terraform-voda-20200217/05-Providers . 
+  117  ls
+  118  rm -rf 0 
+  119  ls
+  120  cd 05-Providers/
+  121  ls
+  122  vim providers.tf 
+  123  ls
+  124  cp -rf ../03-Basic-commands-execution/.terraform . 
+  125  ls
+  126  cat ../04-Resources/resources.tf >> providers.tf 
+  127  vim providers.tf 
+  128  terraform init 
+  129  terraform apply 
+  130  vim providers.tf 
+  131  terraform apply 
+  132  terraform destroy 
+  133  ls
+  134  rm -rf .terraform/ terraform.tfstate terraform.tfstate.backup 
+  135  ls
+  136  cd ..
+  137  ls
+  138  cp -rf ../terraform-voda-20200217/06-Variables . 
+  139  ls
+  140  cd 06-Variables/
+  141  ls
+  142  cat var-file-example.tfvars 
+  143  ls
+  144  cat variables.tf 
+  145  cat ../04-Resources/resources.tf >> variables.tf 
+  146  ls
+  147  vim variables.tf 
+  148  vi var-file-example.tfvars 
+  149  ls
+  150  ls -a 
+  151  cp -rf ../03-Basic-commands-execution/.terraform . 
+  152  ls
+  153  terraform init 
+  154  terraform apply 
+  155  vi variables.tf 
+  156  terraform apply 
+  157  vi variables.tf 
+  158  terraform apply 
+  159  vi variables.tf 
+  160  terraform apply 
+  161  terraform destroy 
+  162  cd 
+  163  ls
+  164  cd terraform-12/06-Variables/
+  165  ls
+  166  vim variables.tf 
+  167  terraform apply 
+  168  vim variables.tf 
+  169  terraform apply 
+  170  vi variables.tf 
+  171  terraform apply 
+  172  vi variables.tf 
+  173  terraform apply 
+  174  vi variables.tf 
+  175  terraform apply 
+  176  vi variables.tf 
+  177  terraform apply 
+  178  vi variables.tf 
+  179  terraform apply 
+  180  vi variables.tf 
+  181  terraform apply 
+  182  ls
+  183  vim variables.tf 
+  184  terraform apply 
+  185  vim variables.tf 
+  186  terraform apply 
+  187  vim variables.tf 
+  188  terraform validate
+  189  ls
+  190  vim variables.tf 
+  191  terraform apply 
+  192  vim variables.tf 
+  193  terraform apply 
+  194  vim variables.tf 
+  195  terraform apply 
+  196  terraform apply -vvvv
+  197  vim variables.tf 
+  198  terraform apply -vvvv
+  199  terraform plan 
+  200  vim variables.tf 
+  201  terraform plan 
+  202  terraform --version 
+  203  vim variables.tf 
+  204  terraform plan 
+  205  vim variables.tf 
+  206  terraform plan 
+  207  vim variables.tf 
+  208  terraform plan 
+  209  vim variables.tf 
+  210  terraform plan 
+  211  vim variables.tf 
+  212  terraform plan 
+  213  vim variables.tf 
+  214  terraform plan 
+  215  vim variables.tf 
+  216  terraform plan 
+  217  terraform plan -v
+  218  terraform plan --vvv
+  219  terraform plan 
+  220  vim variables.tf 
+  221  terraform plan 
+  222  vim variables.tf 
+  223  terraform plan 
+  224  vim variables.tf 
+  225  terraform plan 
+  226  vim variables.tf 
+  227  terraform plan
+  228  vim variables.tf 
+  229  terraform plan
+  230  vim variables.tf 
+  231  terraform plan
+  232  vim variables.tf 
+  233  terraform plan
+  234  vim variables.tf 
+  235  cat ../04-Resources/resources.tf 
+  236  cat ../05-Providers/providers.tf 
+  237  ls
+  238  cat ../../terraform-voda-20200217/06-Variables/variables.tf 
+  239  vi variables.tf 
+  240  terraform plan
+  241  vi variables.tf 
+  242  terraform plan
+  243  terraform apply 
+  244  vi variables.tf 
+  245  terraform apply 
+  246  vi variables.tf 
+  247  terraform apply 
+  248  terraform destroy 
+  249  ls
+  250  vi variables.tf 
+  251  terraform apply 
+  252  terraform destroy
+  253  vim variables.tf 
+  254  terraform apply 
+  255  vi variables.tf 
+  256  terraform apply 
+  257  vi variables.tf 
+  258  terraform apply 
+  259  terraform destroy 
+  260  ls
+  261  rm -rf .terraform/ terraform.tfstate* 
+  262  ls
+  263  cd ..
+  264  ls
+  265  cp -rf ../terraform-voda-20200217/07-Outputs . 
+  266  ls
+  267  cd 07-Outputs/
+  268  ls
+  269  cat outputs.tf 
+  270  ls
+  271  cat ../05-Providers/
+  272  cat ../05-Providers/providers.tf 
+  273  ls
+  274  cat ../04-Resources/resources.tf 
+  275  ls
+  276  cat outputs.tf 
+  277  ls
+  278  cd ..
+  279  ls
+  280  06-Variables/
+  281  ls
+  282  cat 06-Variables/variables.tf 
+  283  ls
+  284  cat 05-Providers/providers.tf 0
+  285  ls
+  286  vim 06-Variables/variables.tf 
+  287  ls
+  288  cd 06-Variables/
+  289  ls
+  290  terraform apply 
+  291  ls
+  292  terraform init ; terraform apply 
+  293  terraform show
+  294  terraform destroy
+  295  ls
+  296  cd ..
+  297  ls
+  298  cd 07-Outputs/
+  299  ls
+  300  > outputs.tf 
+  301  vi outputs.tf 
+  302  cp -rf ../06-Variables/.terraform . 
+  303  terraform init 
+  304  vi outputs.tf 
+  305  terraform init 
+  306  vi outputs.tf 
+  307  terraform init 
+  308  vi outputs.tf 
+  309  terraform init 
+  310  vi outputs.tf 
+  311  terraform init 
+  312  terraform apply
+  313  vi outputs.tf 
+  314  terraform apply
+  315  vi outputs.tf 
+  316  terraform apply
+  317  vi outputs.tf 
+  318  terraform apply
+  319  terraform show
+  320  terraform destroy 
+  321  vi outputs.tf 
+  322  terraform apply
+  323  vi outputs.tf 
+  324  terraform apply
+  325  vi outputs.tf 
+  326  terraform apply
+  327  vi outputs.tf 
+  328  terraform apply
+  329  terraform show 
+  330  cat outputs.tf 
+  331  terraform show 
+  332  terraform destroy
+  333  vi outputs.tf 
+  334  terraform plan
+  335  vi outputs.tf 
+  336  terraform plan
+  337  ls
+  338  vi outputs.tf 
+  339  terraform plan
+  340  vi outputs.tf 
+  341  terraform plan
+  342  vi outputs.tf 
+  343  terraform plan
+  344  terraform apply
+  345  terraform destroy 
+  346  vi destroy
+  347  vi outputs.tf 
+  348  terraform apply
+  349  vi outputs.tf 
+  350  terraform apply
+  351  vi outputs.tf 
+  352  terraform apply
+  353  vi outputs.tf 
+  354  terraform apply
+  355  vi outputs.tf 
+  356  terraform apply
+  357  vi outputs.tf 
+  358  terraform apply
+  359  vi outputs.tf 
+  360  terraform apply
+  361  vi outputs.tf 
+  362  terraform apply
+  363  vi outputs.tf 
+  364  terraform apply
+  365  vi outputs.tf 
+  366  terraform apply
+  367  vi outputs.tf 
+  368  terraform apply
+  369  vi outputs.tf 
+  370  terraform apply
+  371  vi outputs.tf 
+  372  ls
+  373  git clone https://github.com/apparentlymart/terraform-clean-syntax.git
+  374  ls
+  375  cd terraform-clean-syntax/
+  376  ls
+  377  cat README.md 
+  378  terraform fmt 
+  379  ls
+  380  cd ..
+  381  ls
+  382  terraform-clean-syntax . 
+  383  ls
+  384  cd terraform-clean-syntax/
+  385  ls
+  386  cat LICENSE 
+  387  ls
+  388  cd ..
+  389  ls
+  390  ls
+  391  cd terraform-12/
+  392  ls
+  393  cd 07-Outputs/
+  394  ls
+  395  terraform apply 
+  396  vi outputs.tf 
+  397  rm .outputs.tf.swp 
+  398  vi outputs.tf 
+  399  terraform apply 
+  400  vi outputs.tf 
+  401  terraform apply 
+  402  vi outputs.tf 
+  403  terraform apply 
+  404  vi outputs.tf 
+  405  terraform apply 
+  406  vi outputs.tf 
+  407  terraform apply 
+  408  vi outputs.tf 
+  409  terraform apply 
+  410  vi outputs.tf 
+  411  terraform apply 
+  412  vi outputs.tf 
+  413  terraform apply 
+  414  vi outputs.tf 
+  415  terraform apply 
+  416  vi outputs.tf 
+  417  terraform apply 
+  418  vi outputs.tf 
+  419  terraform apply 
+  420  vi outputs.tf 
+  421  terraform apply 
+  422  vi outputs.tf 
+  423  terraform apply 
+  424  vi outputs.tf 
+  425  terraform apply 
+  426  terraform destroy
+  427  cat outputs.tf 
+  428  vi outputs.tf 
+  429  terraform apply 
+  430  vi outputs.tf 
+  431  terraform apply 
+  432  ls
+  433  rm -rf terraform.tfstate* 
+  434  rm -rf .terraform
+  435  ls
+  436  cd ..
+  437  ls
+  438  cd 06-Variables/
+  439  ls -a 
+  440  rm -rf .terraform/ terraform.tfstate* 
+  441  ls
+  442  cd ../05-Providers/
+  443  ls
+  444  ls -a 
+  445  cd ../04-Resources/
+  446  ls -a 
+  447  cd ../03-Basic-commands-execution/
+  448  ls
+  449  cd ..
+  450  ls
+  451  cp -rf ../terraform-voda-20200217/08-First-Exercise . 
+  452  ls
+  453  cd 08-First-Exercise/
+  454  ls
+  455  cat answers.tf 
+  456  ls
+  457  cd ..
+  458  ls
+  459  cat 07-Outputs/
+  460  cat 07-Outputs/outputs.tf 
+  461  ls
+  462  cat 05-Providers/providers.tf 
+  463  ls
+  464  cat 08-First-Exercise/
+  465  cat 08-First-Exercise/answers.tf 
+  466  ls
+  467  cd 04-Resources/
+  468  ls
+  469  vim resources.tf 
+  470  terraform init 
+  471  terraform apply 
+  472  vim resources.tf 
+  473  terraform apply 
+  474  vim resources.tf 
+  475  terraform apply 
+  476  vim resources.tf 
+  477  terraform apply 
+  478  terraform destroy
+  479  vim resources.tf 
+  480  ls
+  481  rm -rf .terraform terraform.tfstate* 
+  482  ls
+  483  cd ../08-First-Exercise/
+  484  ls
+  485  cd ..
+  486  ls
+  487  cd 06-Variables/
+  488  l
+  489  ls
+  490  cat variables.tf 
+  491  cd ..
+  492  ls
+  493  cat 05-Providers/
+  494  cat 05-Providers/providers.tf 
+  495  ls
+  496  cd 08-First-Exercise/
+  497  ls
+  498  > answers.tf 
+  499  vim answers.tf 
+  500  cp -rf ../03-Basic-commands-execution/.terraform . 
+  501  ls
+  502  terraform init 
+  503  terraform plan 
+  504  terraform apply 
+  505  ls
+  506  vim answers.tf 
+  507  terraform apply 
+  508  terraform destroy 
+  509  vi answers.tf 
+  510  terraform destroy 
+  511  vi answers.tf 
+  512  terraform apply 
+  513  ls
+  514  vim answers.tf 
+  515  ls
+  516  terraform destroy
+  517  ls
+  518  rm -rf terraform.tfstate* 
+  519  ls
+  520  cd ..
+  521  ls
+  522  cd ..
+  523  ls
+  524  cp -rf terraform-12 terraform-voda-20200217/
+  525  cd terraform-voda-20200217/
+  526  ls
+  527  cd terraform-12/
+  528  ls
+  529  cd 03-Basic-commands-execution/
+  530  ls
+  531  rm -rf .terraform
+  532  ls
+  533  cd ..
+  534  ls
+  535  cd ..
+  536  ls
+  537  du -sh terraform-12
+  538  cd terraform-12/
+  539  ls
+  540  du -sh * 
+  541  cd 08-First-Exercise/
+  542  ls
+  543  ls-a 
+  544  ls -a 
+  545  rm -rf .terraform 
+  546  ls
+  547  cd ..
+  548  ls
+  549  cd ..
+  550  ls
+  551  du -sh 
+  552  du -sh * 
+  553  cd 31-Openstack/
+  554  ls
+  555  du -sh * 
+  556  cd 00-Project/
+  557  ls -a 
+  558  rm -rf .terraform 
+  559  ls
+  560  cd ..
+  561  ls
+  562  cd 01-Users/
+  563  ls
+  564  rm -rf terraform.tfstate .terraform/
+  565  ls
+  566  cd ..
+  567  ls
+  568  cd 02-User_with_Project/
+  569  ls
+  570  rm -rf .terraform/
+  571  cd ..
+  572  ls
+  573  cd 03-Sample-instance/
+  574  ls
+  575  cd ..
+  576  ls
+  577  du -sh * 
+  578  cd ..
+  579  ls
+  580  du -sh * 
+  581  ls
+  582  git add . ; git commit -m "Terraform 12 GCP Code"
+  583  git config --global user.email "amitvashist7@gmail.com"
+  584  git config --global user.name "Amit Vashist"
+  585  git add . ; git commit -m "Terraform 12 GCP Code"
+  586  git push 
+  587  ls
+  588  cd ..
+  589  ls
+  590  cd terraform-12/
+  591  ls
+  592  cp -rf ../terraform-voda-20200217/09-Interpolations-expressions . 
+  593  ls
+  594  cp -rf 08-First-Exercise/answers.tf 09-Interpolations-expressions/expressions.tf 
+  595  ls
+  596  vim 09-Interpolations-expressions/
+  597  vim 09-Interpolations-expressions/expressions.tf 
+  598  ls
+  599  cd 09-Interpolations-expressions/
+  600  ls
+  601  vim expressions.tf 
+  602  cp -rf ../03-Basic-commands-execution/.terraform . 
+  603  terraform init 
+  604  vim expressions.tf 
+  605  terraform init 
+  606  ls
+  607  cat  ../08-First-Exercise/answers.tf 
+  608  vim expressions.tf 
+  609  terraform init 
+  610  vi expressions.tf 
+  611  terraform init 
+  612  vi expressions.tf 
+  613  terraform init 
+  614  terraform plan
+  615  vi expressions.tf 
+  616  terraform plan
+  617  ls
+  618  cat terra11.txt 
+  619  cd 
+  620  wget https://releases.hashicorp.com/terraform/0.11.12/terraform_0.11.12_linux_amd64.zip
+  621  ls
+  622  unzip terraform_0.11.12_linux_amd64.zip 
+  623  ls
+  624  cd bin/
+  625  ls
+  626  mv terraform terraform_12
+  627  ls
+  628  cp -rf ../terraform terraform
+  629  ls
+  630  cd ..
+  631  ls
+  632  cd terraform-12/
+  633  ls
+  634  cd 09-Interpolations-expressions/
+  635  ls
+  636  vim expressions.tf 
+  637  terraform init 
+  638  rm -rf .terraform/
+  639  terraform init 
+  640  terraform -version 
+  641  ls
+  642  ls -a 
+  643  terraform init 
+  644  vi expressions.tf 
+  645  ls
+  646  chmod +x /home/terrafrom07/bin/terraform
+  647  cd 
+  648  ls
+  649  source .bashrc 
+  650  cd - 
+  651  terraform init 
+  652  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kube.tf 
+  653  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kubernetes/variables.tf 
+  654  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kubernetes/providers.tf 
+  655  vi expressions.tf 
+  656  terraform init 
+  657  vi expressions.tf 
+  658  terraform init 
+  659  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kubernetes/variables.tf 
+  660  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kubernetes/providers.tf 
+  661  ls
+  662  vim expressions.tf 
+  663  cat ../../terraform-voda-20200217/25-K8S-Deploy-Cluster/kubernetes/providers.tf 
+  664  vim expressions.tf 
+  665  terraform init 
+  666  terraform_12 init 
+  667  terraform plan
+  668  terraform_12 plan 
+  669  vim expressions.tf 
+  670  terraform_12 plan 
+  671  vim expressions.tf 
+  672  terraform_12 plan 
+  673  cat ../08-First-Exercise/answers.tf 
+  674  vim expressions.tf 
+  675  terraform_12 plan 
+  676  vim expressions.tf 
+  677  terraform_12 plan 
+  678  ls
+  679  vim expressions.tf 
+  680  rm -rf .terraform/
+  681  terraform init 
+  682  vi expressions.tf 
+  683  terraform init 
+  684  vi expressions.tf 
+  685  terraform init 
+  686  vi expressions.tf 
+  687  terraform init 
+  688  vi expressions.tf 
+  689  terraform init 
+  690  vi expressions.tf 
+  691  terraform init 
+  692  vi expressions.tf 
+  693  terraform init 
+  694  vi expressions.tf 
+  695  terraform init 
+  696  vi expressions.tf 
+  697  terraform init 
+  698  vi expressions.tf 
+  699  terraform init 
+  700  vi expressions.tf 
+  701  terraform init 
+  702  vi expressions.tf 
+  703  terraform init 
+  704  vi expressions.tf 
+  705  terraform init 
+  706  vi expressions.tf 
+  707  terraform init 
+  708  ls
+  709  terraform plan
+  710  ls
+  711  vim expressions.tf 
+  712  terraform plan
+  713  ls
+  714  cd ..
+  715  ls
+  716  cd 09-Interpolations-expressions/
+  717  ls
+  718  terraform apply 
+  719  vim expressions.tf 
+  720  terraform apply 
+  721  vim expressions.tf 
+  722  terraform apply 
+  723  vim expressions.tf 
+  724  terraform apply 
+  725  terraform destroy
+  726  ls
+  727  rm -rf terraform.tfstate* 
+  728  rm -rf .terraform
+  729  ls
+  730  cd ..
+  731  ls
+  732  cp -rf 09-Interpolations-expressions 10-Local
+  733  cd 10-Local/
+  734  ls
+  735  rm -rf terra11.txt 
+  736  mv expressions.tf local.tf
+  737  ls
+  738  vim local.tf 
+  739  ls
+  740  terraform init 
+  741  terraform plan 
+  742  ls
+  743  cd ..
+  744  ls
+  745  cp -rf ../terraform-voda-20200217/09-Interpolations-expressions 11-Data-Source
+  746  ls
+  747  cd 11-Data-Source/
+  748  ls
+  749  mv expressions.tf data-source.tf
+  750  ls
+  751  vim data-source.tf 
+  752  ls
+  753  cd ..
+  754  ls
+  755  cat 09-Interpolations-expressions/expressions.tf 
+  756  ls
+  757  cp -rf 09-Interpolations-expressions/expressions.tf 11-Data-Source/data-source.tf 
+  758  ls
+  759  cd 11-Data-Source/
+  760  ls
+  761  vim data-source.tf 
+  762  ls
+  763  cp -rf ../10-Local/.terraform . 
+  764  terraform init 
+  765  terraform plan
+  766  ls
+  767  rm -rf terra11.txt 
+  768  ls
+  769  rm -rf .terraform
+  770  ls
+  771  cd ..
+  772  ls
+  773  cd ..
+  774  cd terraform-12/
+  775  ls
+  776  du -sh * 
+  777  rm -rf 10-Local/.terraform
+  778  rm -rf 08-First-Exercise/.terraform
+  779  rm -rf 03-Basic-commands-execution/.terraform
+  780  ls
+  781  du -sh * 
+  782  cp -rf 09-Interpolations-expressions/terra11.txt 01-Setup-Terrafrom/
+  783  ls
+  784  ..
+  785  ls
+  786  cd ..
+  787  ls
+  788  cp -rf terraform-12 terraform-voda-20200217/GCP
+  789  cd terraform-voda-20200217/
+  790  ls
+  791  git add . ; git commit -m "GCP Project"
+  792  git push 
+  793  init 0 
+  794  exit
+  795  sudo su - 
+  796  exit
+  797  ls
+  798  cd terraform-hpe-31March2020/04-Resources/
+  799  ls
+  800  vim resources.tf 
+  801  ls -a 
+  802  vim resources.tf 
+  803  terraform init 
+  804  terraform plan
+  805  vim resources.tf 
+  806  terraform apply 
+  807  terraform destroy
+  808  ls
+  809  vim resources.tf 
+  810  terraform apply 
+  811  ls
+  812  vim resources.tf 
+  813  terraform apply 
+  814  vi resources.tf 
+  815  terraform apply 
+  816  ls
+  817  terraform destroy 
+  818  ls
+  819  vim resources.tf 
+  820  terraform apply 
+  821  terraform destroy
+  822  terraform destroy -target forontend
+  823  terraform destroy -target frontend
+  824  terraform destroy -target=frontend
+  825  terraform destroy -target=frontend-av
+  826  cat resources.tf 
+  827  terraform destroy -target=frontend
+  828  ls
+  829  terraform destroy
+  830  terraform destroy -target=google_compute_instance.frontend
+  831  terraform destroy -target=google_compute_instance.backend
+  832  vi resources.tf 
+  833  terraform destroy
+  834  vi resources.tf 
+  835  terraform destroy
+  836  ls
+  837  rm -rf terraform.tfstate* 
+  838  ls
+  839  ls -a
+  840  rm -rf .terraform
+  841  l
+  842  cd ..
+  843  ls
+  844  du -sh * 
+  845  git add . ; git commit -m "04-Resources"; git push 
+  846  ls
+  847  cp -rf ../old/terraform-12/05-Providers . 
+  848  ls
+  849  cd 05-Providers/
+  850  ls
+  851  vim providers.tf 
+  852  terraform init 
+  853  terraform apply 
+  854  vim providers.tf 
+  855  terraform apply 
+  856  terraform destroy 
+  857  ls
+  858  vim providers.tf 
+  859  ls
+  860  rm -rf terraform.tfstate* .terraform
+  861  ls
+  862  ls -a 
+  863  ls
+  864  cd ..
+  865  ls
+  866  git add . ; git commit -m "05-Providers"; git push 
+  867  ls
+  868  cp -rf ../old/terraform-12/06-Variables . 
+  869  ls
+  870  cd 06-Variables/
+  871  ls
+  872  vim variables.tf 
+  873  ls
+  874  cat var-file-example.tfvars 
+  875  vi var-file-example.tfvars 
+  876  terraform init 
+  877  terraform plan 
+  878  terraform plan -var-file=var-file-example.tfvars 
+  879  terraform plan -var 'zones=["us-west-1f", "us-west-1e"]'
+  880  terraform plan -var zones='["us-west-1f","us-west-1e"]'
+  881  terraform plan -var 'zones=["us-west-1f","us-west-1e"]'
+  882  ls
+  883  cat var-file-example.tfvars 
+  884  terraform plan -var zones = ["us-west1-c", "us-west1-a"]
+  885  terraform plan -var zones='["us-west1-c", "us-west1-a"]'
+  886  terraform plan -var 'zones=["us-west1-c", "us-west1-a"]'
+  887  ls
+  888  terraform apply -var-file=var-file-example.tfvars 
+  889  terraform destroy
+  890  ls
+  891  rm -rf terraform.tfstate* 
+  892  ls
+  893  rm -rf .terraform
+  894  ls
+  895  cd ..
+  896  ls
+  897  git add . ; git commit -m "06-Variables"; git push 
+  898  ls
+  899  cp -rf ../old/terraform-12/07-Outputs . 
+  900  ls
+  901  cd 07-Outputs/
+  902  ls
+  903  vim outputs.tf 
+  904  ls
+  905  terraform init 
+  906  terraform apply 
+  907  vi outputs.tf 
+  908  terraform apply 
+  909  terraform destroy 
+  910  terraform apply --help
+  911  terraform apply -vvv
+  912  export TF_LOG_PATH=/tmp/terraform.log 
+  913  terraform destroy 
+  914  ls
+  915  terraform destroy 
+  916  terraform apply 
+  917  terraform destroy 
+  918  export TF_LOG=DEBUG
+  919  export TF_LOG_PATH=/tmp/terraform.log
+  920  touch /tmp/terraform.log
+  921  terraform apply 
+  922  terraform destroy 
+  923  ls
+  924  rm -rf terraform.tfstate* 
+  925  ls
+  926  rm -rf .terraform/
+  927  ls
+  928  cd ..
+  929  ls
+  930  history > Day1_History.txt
