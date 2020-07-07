@@ -1,12 +1,12 @@
 provider "google" {
-  project     = "k8s-terraform-demo-272708"
-  credentials = "${file("/home/terrafrom07/.ssh/account.json")}"
+  credentials = file("/tmp/account.json")
+  project     = "gleaming-design-282503"
   region      = "us-west1"
 }
 
 provider "google" {
-  credentials = "${file("/home/terrafrom07/.ssh/account.json")}"
-  project     = "k8s-terraform-demo-272708"
+  credentials = file("/tmp/account.json")
+  project     = "gleaming-design-282503"
   region      = "us-central1"
   alias       = "myregion"
 }
@@ -14,7 +14,7 @@ provider "google" {
 data "google_compute_zones" "us-west1" {}
 
 data "google_compute_zones" "us-central1" {
-     provider = "google.myregion"
+     provider = google.myregion
 }
 
 variable "multi-region-deployment" {
@@ -28,10 +28,10 @@ variable "environment-name" {
 
 
 resource "google_compute_instance" "west_frontend" {
-  depends_on 		= ["google_compute_instance.west_backend"]
-  name     		= "${join("-",list(var.environment-name, "frontend-west"))}"
-  count    		= "${var.multi-region-deployment ? 1 : 0}"
-  zone     		= "${data.google_compute_zones.us-west1.names[count.index]}"
+  depends_on 		= [google_compute_instance.west_backend]
+  name     		= join("-",list(var.environment-name, "frontend-west"))
+  count    		= var.multi-region-deployment ? 1 : 0
+  zone     		= data.google_compute_zones.us-west1.names[count.index]
   machine_type 		= "f1-micro"
   boot_disk {
     initialize_params {
@@ -47,12 +47,12 @@ resource "google_compute_instance" "west_frontend" {
 }
 
 resource "google_compute_instance" "frontend" {
-  provider      	= "google.myregion"
-  name     		= "${join("-",list(var.environment-name, "frontend"))}"
-  depends_on 		= ["google_compute_instance.backend"]
-  count    		= 4
-  #zone     		= "${var.us-central-zones[count.index]}"
-  zone     		= "${data.google_compute_zones.us-central1.names[count.index]}"
+  provider      	= google.myregion
+  name     		= join("-",list(var.environment-name, "frontend"))
+  depends_on 		= [google_compute_instance.backend]
+  count    		= 1
+  #zone     		= var.us-central-zones[count.index]
+  zone     		= data.google_compute_zones.us-central1.names[count.index]
   machine_type 		= "f1-micro"
   boot_disk {
     initialize_params {
@@ -69,12 +69,12 @@ resource "google_compute_instance" "frontend" {
 
 
 resource "google_compute_instance" "backend" {
-  provider      		= "google.myregion"
-  name     		        = "${join("-",list(var.environment-name, "backend"))}"
+  provider      		= google.myregion
+  name     		        = join("-",list(var.environment-name, "backend"))
   machine_type 			= "f1-micro"
   count                 	= 1
-  #zone     			= "${var.us-central-zones[count.index]}"
-  zone     	        	= "${data.google_compute_zones.us-central1.names[count.index]}"
+  #zone     			= var.us-central-zones[count.index]
+  zone     	        	= data.google_compute_zones.us-central1.names[count.index]
   boot_disk {
     initialize_params {
       image 			= "debian-cloud/debian-9"
@@ -94,10 +94,10 @@ resource "google_compute_instance" "backend" {
 
 resource "google_compute_instance" "west_backend" {
   machine_type 			= "f1-micro"
-  name     		        = "${join("-",list(var.environment-name, "backend-west"))}"
-  count    		        = "${var.multi-region-deployment ? 2 : 0 }"
+  name     		        = join("-",list(var.environment-name, "backend-west"))
+  count    		        = var.multi-region-deployment ? 2 : 0 
   #zone     			= "${var.us-west-zones[count.index]}"
-  zone     		        = "${data.google_compute_zones.us-west1.names[count.index]}"
+  zone     		        = data.google_compute_zones.us-west1.names[count.index]
   boot_disk {
     initialize_params {
       image 			= "debian-cloud/debian-9"
@@ -112,4 +112,13 @@ resource "google_compute_instance" "west_backend" {
   lifecycle {
     prevent_destroy = false
   }
+}
+
+
+output "zones_west1" {
+   value = data.google_compute_zones.us-west1.names
+}
+
+output "zones_central1" {
+   value = data.google_compute_zones.us-central1.names
 }

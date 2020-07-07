@@ -1,12 +1,12 @@
 provider "google" {
-  credentials = file("/home/terrafrom07/.ssh/account.json")
-  project     = "k8s-terraform-demo-272708"
+  credentials = file("/tmp/account.json")
+  project     = "gleaming-design-282503"
   region      = "us-west1"
 }
 
 provider "google" {
-  credentials = file("/home/terrafrom07/.ssh/account.json")
-  project     = "k8s-terraform-demo-272708"
+  credentials = file("/tmp/account.json")
+  project     = "gleaming-design-282503"
   region      = "us-central1"
   alias       = "myregion"
 }
