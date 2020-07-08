@@ -2,17 +2,18 @@
 terraform {
   backend "gcs" {
     bucket  = "amitvashist7-terraform-state"
-    prefix  = "terraform/user/tf7/state"
-    credentials = "/home/terrafrom07/.ssh/account.json"
+    prefix  = "terraform/user/tfv12/tf01/state"
+    credentials = "/tmp/account.json"
   }
 }
 
 provider "google" {
-  credentials = "${file("/home/terrafrom07/.ssh/account.json")}"
-  project     = "k8s-terraform-demo-272708"
+  credentials = file("/tmp/account.json")
+  project     = "gleaming-design-282503"
   region      = "us-west1"
   zone        = "us-west1-c"
 }
+
 
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance-1"
