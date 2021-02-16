@@ -1,11 +1,11 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt install nfs-kernel-server -y 
+#sudo apt install nfs-kernel-server -y 
 sudo apt install nfs-common -y 
-sudo mkdir -p /srv/homes 
-sudo chmod 777 -R  /srv/homes
-sudo echo "/srv/homes       *(rw,sync,root_squash,subtree_check)" >> /etc/exports
+#sudo mkdir -p /srv/homes 
+#sudo chmod 777 -R  /srv/homes
+#sudo echo "/srv/homes       *(rw,sync,root_squash,subtree_check)" >> /etc/exports
 
 
 #apt-get install maven -y

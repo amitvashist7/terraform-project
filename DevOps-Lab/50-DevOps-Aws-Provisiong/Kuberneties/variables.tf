@@ -3,11 +3,11 @@ provider "aws" {
 }                      
 
 variable "key_name" {
-  default = "k8s-demo-vmware-keypair"
+  default = "terraform-k8s-key"
 }
 
 variable "ami" {
-  default = "ami-0653e888ec96eab9b"
+  default = "ami-0ebc8f6f580a04647"
 }
 
 
@@ -24,11 +24,11 @@ variable "us-east-zones" {
 }
 
 variable "sg-id" {
-  default = "sg-05361583173f5af76"
+  default = "sg-04782317b2f3efd8f"
 }
 
 variable "instance_count" {
-  default = 2
+  default = 3
 }
 
 variable "instance_tags" {
